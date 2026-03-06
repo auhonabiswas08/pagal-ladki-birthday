@@ -1,4 +1,11 @@
 function playMusic() {
-  const music = document.getElementById("music");
-  music.play();
+  var music = document.getElementById("music");
+
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
 }
+
+document.getElementById("musicButton").addEventListener("click", playMusic);
