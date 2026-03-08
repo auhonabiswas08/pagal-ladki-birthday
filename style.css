@@ -40,24 +40,25 @@ animation:twinkle 5s infinite alternate;
 100%{opacity:0.9}
 }
 
-/* balloons */
+/* balloon container */
 
-.balloons{
+#balloon-container{
 position:fixed;
 width:100%;
 height:100%;
 pointer-events:none;
 }
 
+/* balloon */
+
 .balloon{
 width:35px;
 height:50px;
 border-radius:50%;
 position:absolute;
-animation:float 12s infinite linear;
 }
 
-/* balloon strings */
+/* balloon string */
 
 .balloon::after{
 content:"";
@@ -68,27 +69,6 @@ background:#555;
 top:50px;
 left:50%;
 transform:translateX(-50%);
-}
-
-/* colors */
-
-.b1{background:#ff6b6b; left:10%; top:-60px;}
-.b2{background:#ffd93d; left:30%; bottom:-60px;}
-.b3{background:#6bcB77; left:50%; top:-60px;}
-.b4{background:#4d96ff; left:70%; bottom:-60px;}
-.b5{background:#c77dff; left:85%; top:-60px;}
-.b6{background:#ff8fab; left:20%; bottom:-60px;}
-.b7{background:#7bdff2; left:60%; top:-60px;}
-
-@keyframes float{
-0%{transform:translateY(0)}
-100%{transform:translateY(-120vh)}
-}
-
-.landing-container{
-margin-top:25px;
-position:relative;
-z-index:2;
 }
 
 /* title */
@@ -124,22 +104,9 @@ border-radius:10px;
 margin:4px auto;
 }
 
-.top{
-width:105px;
-background:#e8c8a0;
-}
-
-.middle{
-width:135px;
-background:#d9b38c;
-}
-
-.bottom{
-width:170px;
-background:#cfa77b;
-}
-
-/* candles */
+.top{width:105px;background:#e8c8a0;}
+.middle{width:135px;background:#d9b38c;}
+.bottom{width:170px;background:#cfa77b;}
 
 .candles{
 display:flex;
@@ -177,8 +144,6 @@ box-shadow:
 50%{transform:scale(1.2)}
 100%{transform:scale(1)}
 }
-
-/* icon buttons */
 
 .icon-buttons button{
 font-size:24px;
