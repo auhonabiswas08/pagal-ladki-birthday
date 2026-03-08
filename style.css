@@ -2,14 +2,7 @@ body{
 margin:0;
 text-align:center;
 font-family:Arial,sans-serif;
-
-background:linear-gradient(
-180deg,
-#A3B18A,
-#CFE1B9,
-#E8F0E1
-);
-
+background:linear-gradient(180deg,#A3B18A,#CFE1B9,#E8F0E1);
 height:100vh;
 overflow:hidden;
 color:#2f3b2f;
@@ -23,6 +16,8 @@ top:0;
 left:0;
 width:100%;
 height:100%;
+pointer-events:none;
+z-index:1;
 
 background-image:
 radial-gradient(#ffd84d 2px, transparent 2px),
@@ -34,9 +29,6 @@ background-size:120px 120px;
 opacity:0.8;
 
 animation:twinkle 5s infinite alternate;
-
-pointer-events:none;
-z-index:1;
 }
 
 @keyframes twinkle{
@@ -48,11 +40,8 @@ z-index:1;
 
 #balloon-container{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
-
 pointer-events:none;
 z-index:2;
 }
@@ -62,7 +51,6 @@ width:36px;
 height:50px;
 border-radius:50%;
 position:absolute;
-
 animation:sway 4s ease-in-out infinite alternate;
 }
 
@@ -90,14 +78,10 @@ z-index:10;
 margin-top:20px;
 }
 
-/* title */
-
 h1{
 font-family:'Playfair Display',serif;
 font-size:60px;
 }
-
-/* message */
 
 .message{
 font-size:18px;
@@ -162,12 +146,39 @@ box-shadow:
 100%{transform:scale(1)}
 }
 
-/* buttons */
+/* wish text */
 
-.icon-buttons{
-position:relative;
-z-index:50;
+#wishText{
+opacity:0;
+font-size:22px;
+margin-top:10px;
+font-style:italic;
+transition:opacity 1.5s ease;
 }
+
+#wishText.show{
+opacity:1;
+}
+
+/* smoke */
+
+.smoke{
+width:6px;
+height:20px;
+background:rgba(200,200,200,0.4);
+border-radius:50%;
+position:absolute;
+top:-25px;
+left:0;
+animation:smokeRise 2s forwards;
+}
+
+@keyframes smokeRise{
+0%{opacity:0.8; transform:translateY(0);}
+100%{opacity:0; transform:translateY(-40px);}
+}
+
+/* buttons */
 
 .icon-buttons button{
 font-size:24px;
@@ -177,10 +188,8 @@ border-radius:50%;
 border:none;
 margin:8px;
 cursor:pointer;
-
 background:#556B4F;
 color:white;
-
 transition:0.3s;
 }
 
