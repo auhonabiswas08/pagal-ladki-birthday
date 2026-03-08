@@ -1,23 +1,25 @@
-function startExperience(){
+function startExperience() {
 
 const music = document.getElementById("music");
 
+if (music) {
 music.play();
+}
 
 confetti({
-particleCount:250,
+particleCount:300,
 spread:120,
 origin:{y:0.6}
 });
 
 }
 
-function blowCandles(){
+function blowCandles() {
 
-const flames=document.querySelectorAll(".flame");
+const flames = document.querySelectorAll(".flame");
 
-flames.forEach(f=>{
-f.style.display="none";
+flames.forEach(function(f){
+f.style.display = "none";
 });
 
 confetti({
@@ -28,9 +30,13 @@ origin:{y:0.6}
 
 }
 
-window.onload=function(){
+/* balloons */
 
-const colors=[
+window.onload = function() {
+
+const container = document.getElementById("balloon-container");
+
+const colors = [
 "#ff6b6b",
 "#ffd93d",
 "#6bcB77",
@@ -41,39 +47,40 @@ const colors=[
 "#ffa94d"
 ];
 
-function createBalloon(){
+function createBalloon() {
 
-const balloon=document.createElement("div");
+const balloon = document.createElement("div");
+balloon.className = "balloon";
 
-balloon.className="balloon";
+balloon.style.background =
+colors[Math.floor(Math.random()*colors.length)];
 
-balloon.style.background=colors[Math.floor(Math.random()*colors.length)];
+balloon.style.left = Math.random()*100 + "vw";
 
-balloon.style.left=Math.random()*100+"vw";
-
-const fromTop=Math.random()>0.5;
-
-if(fromTop){
-balloon.style.top="-80px";
-}else{
-balloon.style.bottom="-80px";
+if (Math.random() > 0.5) {
+balloon.style.top = "-80px";
+} else {
+balloon.style.bottom = "-80px";
 }
 
-const duration=8+Math.random()*7;
+const duration = 8 + Math.random()*7;
 
-balloon.animate([
+balloon.animate(
+[
 {transform:"translateY(0px) translateX(0px)"},
 {transform:"translateY(-120vh) translateX("+(Math.random()*250-125)+"px)"}
-],{
-duration:duration*1000,
-iterations:Infinity
-});
+],
+{
+duration: duration*1000,
+iterations: Infinity
+}
+);
 
-document.getElementById("balloon-container").appendChild(balloon);
+container.appendChild(balloon);
 
 }
 
-for(let i=0;i<12;i++){
+for (let i = 0; i < 12; i++) {
 createBalloon();
 }
 
