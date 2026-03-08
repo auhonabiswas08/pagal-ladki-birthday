@@ -1,10 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-/* CONFETTI + MUSIC BUTTON */
+function startExperience(){
 
 const music = document.getElementById("music");
-
-document.getElementById("confettiButton").addEventListener("click", function(){
 
 music.play();
 
@@ -14,12 +10,9 @@ spread:120,
 origin:{y:0.6}
 });
 
-});
+}
 
-
-/* CAKE CANDLE BLOW */
-
-window.blowCandles = function(){
+function blowCandles(){
 
 const flames=document.querySelectorAll(".flame");
 
@@ -33,10 +26,12 @@ spread:180,
 origin:{y:0.6}
 });
 
-};
+}
 
 
-/* RANDOM BALLOONS */
+/* BALLOONS */
+
+window.onload=function(){
 
 const colors=[
 "#ff6b6b",
@@ -85,4 +80,4 @@ for(let i=0;i<12;i++){
 createBalloon();
 }
 
-});
+};
