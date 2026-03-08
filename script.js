@@ -1,6 +1,11 @@
-function startExperience(){
+document.addEventListener("DOMContentLoaded", function () {
 
-const music=document.getElementById("music");
+const music = document.getElementById("music");
+const confettiButton = document.querySelector(".icon-buttons button");
+
+/* CONFETTI + MUSIC BUTTON */
+
+confettiButton.addEventListener("click", function () {
 
 music.play();
 
@@ -10,9 +15,12 @@ spread:120,
 origin:{y:0.6}
 });
 
-}
+});
 
-function blowCandles(){
+
+/* CAKE CANDLE BLOW */
+
+window.blowCandles = function(){
 
 const flames=document.querySelectorAll(".flame");
 
@@ -26,14 +34,10 @@ spread:180,
 origin:{y:0.6}
 });
 
-}
-
-function notePlaceholder(){}
+};
 
 
 /* RANDOM BALLOONS */
-
-window.onload=function(){
 
 const colors=[
 "#ff6b6b",
@@ -78,10 +82,10 @@ document.getElementById("balloon-container").appendChild(balloon);
 
 }
 
-/* MORE BALLOONS */
+/* CREATE MORE BALLOONS */
 
 for(let i=0;i<12;i++){
 createBalloon();
 }
 
-};
+});
