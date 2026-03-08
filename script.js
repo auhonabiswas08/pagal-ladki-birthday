@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 const music = document.getElementById("music");
-const confettiButton = document.querySelector(".icon-buttons button");
 
-/* CONFETTI + MUSIC BUTTON */
+/* FIXED CONFETTI + MUSIC BUTTON */
+
+const buttons = document.querySelectorAll(".icon-buttons button");
+const confettiButton = buttons[0]; // 🎉 button
 
 confettiButton.addEventListener("click", function () {
 
@@ -81,8 +83,6 @@ iterations:Infinity
 document.getElementById("balloon-container").appendChild(balloon);
 
 }
-
-/* CREATE MORE BALLOONS */
 
 for(let i=0;i<12;i++){
 createBalloon();
