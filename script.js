@@ -28,9 +28,6 @@ origin:{y:0.6}
 
 }
 
-
-/* BALLOONS */
-
 window.onload=function(){
 
 const colors=[
