@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
 <title>Happiest Birthday Pagal Ladki ❤️</title>
 
-<link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#A3B18A;
+color:white;
+margin-top:80px;
+}
+
+h1{
+font-size:48px;
+}
+
+p{
+font-size:20px;
+}
+
+.cake{
+font-size:80px;
+cursor:pointer;
+margin:40px;
+}
+
+#wishText{
+opacity:0;
+font-size:26px;
+transition:1s;
+}
+
+#wishText.show{
+opacity:1;
+}
+
+.buttons{
+margin-top:40px;
+}
+
+button{
+font-size:30px;
+padding:15px 30px;
+margin:15px;
+cursor:pointer;
+border:none;
+border-radius:10px;
+}
+</style>
 
 </head>
 
@@ -28,16 +72,9 @@ To infinity and beyond.
 
 <div class="buttons">
 
-<button onclick="
-document.getElementById('music').play();
-confetti({particleCount:300,spread:120});
-">
-🎉
-</button>
+<button onclick="startExperience()">🎉</button>
 
-<button>
-💌
-</button>
+<button onclick="alert('Notes coming soon 💌')">💌</button>
 
 </div>
 
@@ -45,7 +82,28 @@ confetti({particleCount:300,spread:120});
 <source src="assets/music/outofmyleague.mp3" type="audio/mpeg">
 </audio>
 
+<script>
+
+function startExperience(){
+alert("Button clicked!"); 
+document.getElementById("music").play();
+
+confetti({
+particleCount:300,
+spread:120
+});
+}
+
+function blowCandles(){
+document.getElementById("wishText").classList.add("show");
+
+confetti({
+particleCount:500,
+spread:180
+});
+}
+
+</script>
 
 </body>
-
 </html>
