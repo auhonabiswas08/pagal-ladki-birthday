@@ -11,15 +11,16 @@ background:linear-gradient(
 );
 
 color:#2f3b2f;
-
 height:100vh;
 overflow:hidden;
 }
 
-/* golden fairy lights */
+/* fairy lights */
 
 .lights{
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
 
@@ -35,6 +36,7 @@ opacity:0.8;
 animation:twinkle 5s infinite alternate;
 
 pointer-events:none;
+z-index:1;
 }
 
 @keyframes twinkle{
@@ -42,16 +44,18 @@ pointer-events:none;
 100%{opacity:0.9}
 }
 
-/* balloon container */
+/* balloons */
 
 #balloon-container{
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
-pointer-events:none;
-}
 
-/* balloon */
+pointer-events:none;
+z-index:1;
+}
 
 .balloon{
 width:36px;
@@ -59,8 +63,6 @@ height:50px;
 border-radius:50%;
 position:absolute;
 }
-
-/* balloon string */
 
 .balloon::after{
 content:"";
@@ -73,11 +75,19 @@ left:50%;
 transform:translateX(-50%);
 }
 
+/* main content above decorations */
+
+.landing-container{
+position:relative;
+z-index:10;
+margin-top:20px;
+}
+
 /* title */
 
 h1{
 font-family:'Playfair Display', serif;
-font-size:62px;
+font-size:60px;
 margin-bottom:8px;
 }
 
@@ -147,7 +157,7 @@ box-shadow:
 100%{transform:scale(1)}
 }
 
-/* icon buttons */
+/* buttons */
 
 .icon-buttons button{
 font-size:24px;
