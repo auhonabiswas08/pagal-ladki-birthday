@@ -1,8 +1,13 @@
 body{
-text-align:center;
 font-family:Arial;
+text-align:center;
 background:#A3B18A;
 color:white;
+margin:0;
+padding:0;
+}
+
+.container{
 margin-top:80px;
 }
 
@@ -17,12 +22,12 @@ font-size:20px;
 .cake{
 font-size:80px;
 cursor:pointer;
-margin:30px;
+margin:40px;
 }
 
 #wishText{
 opacity:0;
-font-size:24px;
+font-size:26px;
 transition:1s;
 }
 
@@ -30,9 +35,17 @@ transition:1s;
 opacity:1;
 }
 
-.buttons button{
+.buttons{
+margin-top:40px;
+}
+
+button{
 font-size:30px;
-margin:10px;
-padding:10px 20px;
+padding:15px 30px;
+margin:15px;
 cursor:pointer;
+border:none;
+border-radius:10px;
+background:white;
+color:#333;
 }
