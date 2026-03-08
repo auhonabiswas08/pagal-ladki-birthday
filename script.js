@@ -5,8 +5,8 @@ const music=document.getElementById("music");
 music.play();
 
 confetti({
-particleCount:200,
-spread:100,
+particleCount:250,
+spread:120,
 origin:{y:0.6}
 });
 
@@ -21,8 +21,8 @@ f.style.display="none";
 });
 
 confetti({
-particleCount:450,
-spread:160,
+particleCount:500,
+spread:180,
 origin:{y:0.6}
 });
 
@@ -30,7 +30,10 @@ origin:{y:0.6}
 
 function notePlaceholder(){}
 
+
 /* RANDOM BALLOONS */
+
+window.onload=function(){
 
 const colors=[
 "#ff6b6b",
@@ -39,7 +42,8 @@ const colors=[
 "#4d96ff",
 "#c77dff",
 "#ff8fab",
-"#7bdff2"
+"#7bdff2",
+"#ffa94d"
 ];
 
 function createBalloon(){
@@ -55,16 +59,16 @@ balloon.style.left=Math.random()*100+"vw";
 const fromTop=Math.random()>0.5;
 
 if(fromTop){
-balloon.style.top="-60px";
+balloon.style.top="-80px";
 }else{
-balloon.style.bottom="-60px";
+balloon.style.bottom="-80px";
 }
 
-const duration=8+Math.random()*6;
+const duration=8+Math.random()*7;
 
 balloon.animate([
 {transform:"translateY(0px) translateX(0px)"},
-{transform:"translateY(-120vh) translateX("+(Math.random()*200-100)+"px)"}
+{transform:"translateY(-120vh) translateX("+(Math.random()*250-125)+"px)"}
 ],{
 duration:duration*1000,
 iterations:Infinity
@@ -74,6 +78,10 @@ document.getElementById("balloon-container").appendChild(balloon);
 
 }
 
-for(let i=0;i<8;i++){
+/* MORE BALLOONS */
+
+for(let i=0;i<12;i++){
 createBalloon();
 }
+
+};
