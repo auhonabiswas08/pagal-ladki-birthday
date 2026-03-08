@@ -36,7 +36,7 @@ opacity:0.8;
 animation:twinkle 5s infinite alternate;
 
 pointer-events:none;
-z-index:1;
+z-index:0;
 }
 
 @keyframes twinkle{
@@ -54,7 +54,7 @@ width:100%;
 height:100%;
 
 pointer-events:none;
-z-index:1;
+z-index:0;
 }
 
 .balloon{
@@ -75,7 +75,7 @@ left:50%;
 transform:translateX(-50%);
 }
 
-/* main content above decorations */
+/* main content */
 
 .landing-container{
 position:relative;
