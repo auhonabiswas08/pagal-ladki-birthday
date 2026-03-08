@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Happiest Birthday Pagal Ladki ❤️</title>
-
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <style>
@@ -13,6 +11,8 @@ text-align:center;
 background:#A3B18A;
 color:white;
 margin-top:80px;
+min-height:100vh; /* Ensures body takes full height */
+position:relative; /* For proper stacking */
 }
 
 h1{
@@ -27,12 +27,16 @@ font-size:20px;
 font-size:80px;
 cursor:pointer;
 margin:40px;
+position:relative; /* Added */
+z-index:1; /* Added - lower z-index than buttons */
+display:inline-block; /* Added - ensures proper containment */
 }
 
 #wishText{
 opacity:0;
 font-size:26px;
 transition:1s;
+clear:both; /* Added - prevents overlapping */
 }
 
 #wishText.show{
@@ -41,6 +45,9 @@ opacity:1;
 
 .buttons{
 margin-top:40px;
+position:relative; /* Added */
+z-index:10; /* Added - higher z-index than cake */
+clear:both; /* Added - ensures buttons are below the cake */
 }
 
 button{
@@ -50,13 +57,28 @@ margin:15px;
 cursor:pointer;
 border:none;
 border-radius:10px;
+background-color:#588157; /* Added - makes buttons visible */
+color:white; /* Added */
+transition:0.3s; /* Added */
+}
+
+button:hover{ /* Added - hover effect */
+background-color:#3a5e3a;
+transform:scale(1.05);
+}
+
+button:active{ /* Added - click feedback */
+transform:scale(0.95);
+}
+
+/* Added - ensures audio element doesn't interfere */
+audio{
+display:none;
 }
 </style>
-
 </head>
 
 <body>
-
 <h1>Happiest Birthday Pagal Ladki ❤️</h1>
 
 <p>
@@ -71,11 +93,8 @@ To infinity and beyond.
 <p id="wishText">Make a wish Pagalll ✨✨</p>
 
 <div class="buttons">
-
-<button onclick="startExperience()">🎉</button>
-
-<button onclick="alert('Notes coming soon 💌')">💌</button>
-
+<button onclick="startExperience()">🎉 Click for Music & Confetti 🎉</button>
+<button onclick="alert('Notes coming soon 💌')">💌 Notes for You 💌</button>
 </div>
 
 <audio id="music" loop>
@@ -83,22 +102,22 @@ To infinity and beyond.
 </audio>
 
 <script>
-
 function startExperience(){
-
-alert("Button clicked!");
+alert("Button clicked! 🎉"); // Added for debugging
 
 const music = document.getElementById("music");
-
 if(music){
-music.play().catch(()=>{});
+music.play().catch(error => {
+console.log("Audio play failed:", error);
+alert("Click anywhere on the page first (browser autoplay policy) then try again!");
+});
 }
 
 confetti({
 particleCount:300,
-spread:120
+spread:120,
+origin: { y: 0.6 }
 });
-
 }
 
 function blowCandles(){
@@ -106,9 +125,18 @@ document.getElementById("wishText").classList.add("show");
 
 confetti({
 particleCount:500,
-spread:180
+spread:180,
+origin: { y: 0.6 }
 });
 }
+
+// Add this to handle autoplay policy
+document.body.addEventListener('click', function initAudio() {
+const music = document.getElementById('music');
+if (music) {
+music.play().catch(() => {}); // Try to play on first click
+}
+}, { once: true }); // Only runs once
 
 </script>
 
