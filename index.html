@@ -85,13 +85,20 @@ To infinity and beyond.
 <script>
 
 function startExperience(){
-alert("Button clicked!"); 
-document.getElementById("music").play();
+
+alert("Button clicked!");
+
+const music = document.getElementById("music");
+
+if(music){
+music.play().catch(()=>{});
+}
 
 confetti({
 particleCount:300,
 spread:120
 });
+
 }
 
 function blowCandles(){
