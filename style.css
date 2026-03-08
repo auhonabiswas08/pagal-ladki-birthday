@@ -1,7 +1,7 @@
 body{
 margin:0;
 text-align:center;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 
 background:linear-gradient(
 180deg,
@@ -10,9 +10,9 @@ background:linear-gradient(
 #E8F0E1
 );
 
-color:#2f3b2f;
 height:100vh;
 overflow:hidden;
+color:#2f3b2f;
 }
 
 /* fairy lights */
@@ -35,9 +35,8 @@ opacity:0.8;
 
 animation:twinkle 5s infinite alternate;
 
-/* IMPORTANT FIX */
 pointer-events:none;
-z-index:0;
+z-index:1;
 }
 
 @keyframes twinkle{
@@ -45,7 +44,7 @@ z-index:0;
 100%{opacity:0.9}
 }
 
-/* balloon container */
+/* balloons */
 
 #balloon-container{
 position:fixed;
@@ -54,22 +53,18 @@ left:0;
 width:100%;
 height:100%;
 
-/* IMPORTANT FIX */
 pointer-events:none;
-z-index:0;
+z-index:2;
 }
-
-/* balloons */
 
 .balloon{
 width:36px;
 height:50px;
 border-radius:50%;
 position:absolute;
+
 animation:sway 4s ease-in-out infinite alternate;
 }
-
-/* balloon strings */
 
 .balloon::after{
 content:"";
@@ -82,14 +77,12 @@ left:50%;
 transform:translateX(-50%);
 }
 
-/* balloon sway animation */
-
 @keyframes sway{
 0%{transform:translateX(-10px)}
 100%{transform:translateX(10px)}
 }
 
-/* main content above decorations */
+/* main content */
 
 .landing-container{
 position:relative;
@@ -100,9 +93,8 @@ margin-top:20px;
 /* title */
 
 h1{
-font-family:'Playfair Display', serif;
+font-family:'Playfair Display',serif;
 font-size:60px;
-margin-bottom:8px;
 }
 
 /* message */
@@ -118,9 +110,8 @@ font-style:italic;
 /* cake */
 
 .cake{
-position:relative;
 width:170px;
-margin:16px auto;
+margin:20px auto;
 cursor:pointer;
 }
 
@@ -130,22 +121,9 @@ border-radius:10px;
 margin:4px auto;
 }
 
-.top{
-width:105px;
-background:#e8c8a0;
-}
-
-.middle{
-width:135px;
-background:#d9b38c;
-}
-
-.bottom{
-width:170px;
-background:#cfa77b;
-}
-
-/* candles */
+.top{width:105px;background:#e8c8a0;}
+.middle{width:135px;background:#d9b38c;}
+.bottom{width:170px;background:#cfa77b;}
 
 .candles{
 display:flex;
@@ -160,8 +138,6 @@ height:24px;
 background:white;
 position:relative;
 }
-
-/* flame */
 
 .flame{
 width:7px;
@@ -180,8 +156,6 @@ box-shadow:
 0 0 18px rgba(255,120,0,0.4);
 }
 
-/* flame animation */
-
 @keyframes flicker{
 0%{transform:scale(1)}
 50%{transform:scale(1.2)}
@@ -189,6 +163,11 @@ box-shadow:
 }
 
 /* buttons */
+
+.icon-buttons{
+position:relative;
+z-index:50;
+}
 
 .icon-buttons button{
 font-size:24px;
@@ -198,12 +177,12 @@ border-radius:50%;
 border:none;
 margin:8px;
 cursor:pointer;
+
 background:#556B4F;
 color:white;
+
 transition:0.3s;
 }
-
-/* hover effect */
 
 .icon-buttons button:hover{
 background:#6f8c65;
