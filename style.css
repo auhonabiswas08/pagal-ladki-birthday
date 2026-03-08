@@ -33,6 +33,8 @@ background-size:120px 120px;
 opacity:0.8;
 
 animation:twinkle 5s infinite alternate;
+
+pointer-events:none;
 }
 
 @keyframes twinkle{
