@@ -3,99 +3,156 @@ margin:0;
 text-align:center;
 font-family:Arial, sans-serif;
 
-background: linear-gradient(
+background:linear-gradient(
 180deg,
-#A3B18A 0%,
-#CFE1B9 50%,
-#E8F0E1 100%
+#A3B18A,
+#CFE1B9,
+#E8F0E1
 );
 
 color:#2f3b2f;
+
+height:100vh;
+overflow:hidden;
+}
+
+/* fairy lights */
+
+.lights{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+background-image:
+radial-gradient(#fff7cc 2px, transparent 2px),
+radial-gradient(#fff2aa 2px, transparent 2px),
+radial-gradient(#ffe680 2px, transparent 2px);
+
+background-size:120px 120px;
+opacity:0.6;
+animation:twinkle 6s infinite alternate;
+}
+
+@keyframes twinkle{
+0%{opacity:0.4}
+100%{opacity:0.8}
+}
+
+/* floating balloons */
+
+.balloons{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.balloon{
+width:35px;
+height:50px;
+background:#8fa77a;
+border-radius:50%;
+position:absolute;
+bottom:-80px;
+animation:float 12s infinite;
+opacity:0.7;
+}
+
+.balloon:nth-child(2){left:20%;animation-duration:10s;}
+.balloon:nth-child(3){left:40%;animation-duration:13s;}
+.balloon:nth-child(4){left:60%;animation-duration:11s;}
+.balloon:nth-child(5){left:80%;animation-duration:14s;}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(-120vh)}
 }
 
 .landing-container{
-margin-top:80px;
+margin-top:20px;
+position:relative;
+z-index:2;
 }
+
+/* title */
 
 h1{
 font-family:'Playfair Display', serif;
-font-size:70px;
-letter-spacing:1px;
-color:#2f3b2f;
+font-size:44px;
+margin-bottom:10px;
 }
 
+/* message */
+
 .message{
-font-size:20px;
-max-width:520px;
-margin:30px auto;
-line-height:1.7;
+font-size:16px;
+max-width:420px;
+margin:10px auto;
+line-height:1.6;
 font-style:italic;
 }
 
+/* cake */
+
 .cake{
 position:relative;
-width:200px;
-margin:40px auto;
-filter: drop-shadow(0 20px 25px rgba(0,0,0,0.15));
-}
-
-.cake::after{
-content:"";
-position:absolute;
-bottom:-15px;
-left:50%;
-transform:translateX(-50%);
-width:120px;
-height:20px;
-background:rgba(0,0,0,0.15);
-border-radius:50%;
-filter:blur(8px);
+width:150px;
+margin:20px auto;
+cursor:pointer;
 }
 
 .layer{
-height:40px;
+height:30px;
 border-radius:10px;
-margin:5px auto;
+margin:4px auto;
 }
 
 .top{
-width:120px;
+width:95px;
 background:#e8c8a0;
 }
 
 .middle{
-width:160px;
+width:125px;
 background:#d9b38c;
 }
 
 .bottom{
-width:200px;
+width:150px;
 background:#cfa77b;
 }
+
+/* candles */
 
 .candles{
 display:flex;
 justify-content:center;
-gap:10px;
-margin-bottom:5px;
+gap:8px;
+margin-bottom:4px;
 }
 
 .candle{
-width:8px;
-height:30px;
+width:6px;
+height:24px;
 background:white;
 position:relative;
 }
 
 .flame{
-width:8px;
-height:12px;
+width:7px;
+height:10px;
 background:orange;
 border-radius:50%;
 position:absolute;
-top:-12px;
+top:-10px;
 left:0;
+
 animation:flicker 1s infinite;
+
+box-shadow:
+0 0 6px rgba(255,180,0,0.9),
+0 0 12px rgba(255,150,0,0.6),
+0 0 18px rgba(255,120,0,0.4);
 }
 
 @keyframes flicker{
@@ -104,13 +161,15 @@ animation:flicker 1s infinite;
 100%{transform:scale(1)}
 }
 
+/* icon buttons */
+
 .icon-buttons button{
-font-size:26px;
-width:60px;
-height:60px;
+font-size:22px;
+width:50px;
+height:50px;
 border-radius:50%;
 border:none;
-margin:10px;
+margin:8px;
 cursor:pointer;
 background:#556B4F;
 color:white;
@@ -121,6 +180,8 @@ transition:0.3s;
 background:#6f8c65;
 transform:scale(1.1);
 }
+
+/* popup */
 
 .popup{
 display:none;
@@ -136,9 +197,9 @@ align-items:center;
 
 .noteCard{
 background:#f6f8ef;
-padding:30px;
+padding:25px;
 border-radius:15px;
-max-width:350px;
+max-width:320px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
