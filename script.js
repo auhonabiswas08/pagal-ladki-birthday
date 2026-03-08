@@ -12,18 +12,6 @@ origin:{y:0.6}
 
 }
 
-function showNote(){
-
-document.getElementById("notePopup").style.display="flex";
-
-}
-
-function closeNote(){
-
-document.getElementById("notePopup").style.display="none";
-
-}
-
 function blowCandles(){
 
 const flames=document.querySelectorAll(".flame");
@@ -37,5 +25,11 @@ particleCount:450,
 spread:160,
 origin:{y:0.6}
 });
+
+}
+
+/* placeholder for notes icon */
+
+function notePlaceholder(){
 
 }
