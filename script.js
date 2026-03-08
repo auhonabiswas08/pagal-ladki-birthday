@@ -1,11 +1,25 @@
-function playMusic() {
-  var music = document.getElementById("music");
+function startExperience(){
 
-  if (music.paused) {
-    music.play();
-  } else {
-    music.pause();
-  }
+const music = document.getElementById("music");
+
+music.play();
+
+confetti({
+particleCount:200,
+spread:100,
+origin:{y:0.6}
+});
+
 }
 
-document.getElementById("musicButton").addEventListener("click", playMusic);
+function showNote(){
+
+document.getElementById("notePopup").style.display="flex";
+
+}
+
+function closeNote(){
+
+document.getElementById("notePopup").style.display="none";
+
+}
