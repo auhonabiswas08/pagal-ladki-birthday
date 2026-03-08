@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+/* CONFETTI + MUSIC BUTTON */
+
 const music = document.getElementById("music");
 
-/* FIXED CONFETTI + MUSIC BUTTON */
-
-const buttons = document.querySelectorAll(".icon-buttons button");
-const confettiButton = buttons[0]; // 🎉 button
-
-confettiButton.addEventListener("click", function () {
+document.getElementById("confettiButton").addEventListener("click", function(){
 
 music.play();
 
