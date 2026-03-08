@@ -16,29 +16,32 @@ height:100vh;
 overflow:hidden;
 }
 
-/* fairy lights */
+/* golden fairy lights */
 
 .lights{
 position:fixed;
 width:100%;
 height:100%;
 pointer-events:none;
+
 background-image:
-radial-gradient(#fff7cc 2px, transparent 2px),
-radial-gradient(#fff2aa 2px, transparent 2px),
+radial-gradient(#ffd84d 2px, transparent 2px),
+radial-gradient(#ffcc33 2px, transparent 2px),
 radial-gradient(#ffe680 2px, transparent 2px);
 
 background-size:120px 120px;
-opacity:0.6;
+
+opacity:0.7;
+
 animation:twinkle 6s infinite alternate;
 }
 
 @keyframes twinkle{
 0%{opacity:0.4}
-100%{opacity:0.8}
+100%{opacity:0.9}
 }
 
-/* floating balloons */
+/* balloons */
 
 .balloons{
 position:fixed;
@@ -50,18 +53,32 @@ pointer-events:none;
 .balloon{
 width:35px;
 height:50px;
-background:#8fa77a;
 border-radius:50%;
 position:absolute;
 bottom:-80px;
 animation:float 12s infinite;
-opacity:0.7;
 }
 
-.balloon:nth-child(2){left:20%;animation-duration:10s;}
-.balloon:nth-child(3){left:40%;animation-duration:13s;}
-.balloon:nth-child(4){left:60%;animation-duration:11s;}
-.balloon:nth-child(5){left:80%;animation-duration:14s;}
+/* balloon strings */
+
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:60px;
+background:#555;
+top:50px;
+left:50%;
+transform:translateX(-50%);
+}
+
+/* balloon colors */
+
+.b1{background:#ff6b6b; left:10%;}
+.b2{background:#ffd93d; left:30%;}
+.b3{background:#6bcB77; left:50%;}
+.b4{background:#4d96ff; left:70%;}
+.b5{background:#c77dff; left:85%;}
 
 @keyframes float{
 0%{transform:translateY(0)}
@@ -78,16 +95,16 @@ z-index:2;
 
 h1{
 font-family:'Playfair Display', serif;
-font-size:44px;
+font-size:52px;
 margin-bottom:10px;
 }
 
 /* message */
 
 .message{
-font-size:16px;
-max-width:420px;
-margin:10px auto;
+font-size:18px;
+max-width:460px;
+margin:12px auto;
 line-height:1.6;
 font-style:italic;
 }
@@ -96,29 +113,29 @@ font-style:italic;
 
 .cake{
 position:relative;
-width:150px;
+width:160px;
 margin:20px auto;
 cursor:pointer;
 }
 
 .layer{
-height:30px;
+height:32px;
 border-radius:10px;
 margin:4px auto;
 }
 
 .top{
-width:95px;
+width:100px;
 background:#e8c8a0;
 }
 
 .middle{
-width:125px;
+width:130px;
 background:#d9b38c;
 }
 
 .bottom{
-width:150px;
+width:160px;
 background:#cfa77b;
 }
 
@@ -161,12 +178,12 @@ box-shadow:
 100%{transform:scale(1)}
 }
 
-/* icon buttons */
+/* buttons */
 
 .icon-buttons button{
-font-size:22px;
-width:50px;
-height:50px;
+font-size:24px;
+width:52px;
+height:52px;
 border-radius:50%;
 border:none;
 margin:8px;
