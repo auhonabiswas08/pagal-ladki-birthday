@@ -8,9 +8,90 @@
 
 <body>
 
-<h1>Memories 📸</h1>
+<audio id="memoryMusic" autoplay loop>
+<source src="assets/music/nothing.mp3" type="audio/mpeg">
+</audio>
 
-<p>Coming soon...</p>
+<h1>Some moments deserved another song ❤️</h1>
+
+<div class="heart-gallery">
+
+<img src="assets/photos/1.jpg" class="heart-photo p1">
+<img src="assets/photos/2.jpg" class="heart-photo p2">
+<img src="assets/photos/3.jpg" class="heart-photo p3">
+<img src="assets/photos/4.jpg" class="heart-photo p4">
+
+<img src="assets/photos/5.jpg" class="heart-photo center" onclick="showWall()">
+
+<img src="assets/photos/6.jpg" class="heart-photo p5">
+<img src="assets/photos/7.jpg" class="heart-photo p6">
+
+</div>
+
+<p class="click-text">Click the center ❤️</p>
+
+<div id="photoWall">
+
+<div class="wall-item">
+<img src="assets/photos/8.jpg">
+<p>One of those moments that stayed.</p>
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/9.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/10.jpg">
+<p>I still remember how light this felt.</p>
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/11.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/12.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/13.jpg">
+<p>This had to be here.</p>
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/14.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/15.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/16.jpg">
+<p>No particular reason, still important.</p>
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/17.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/18.jpg">
+</div>
+
+<div class="wall-item">
+<img src="assets/photos/19.jpg">
+<p>And this too.</p>
+</div>
+
+</div>
+
+<script>
+function showWall(){
+document.getElementById("photoWall").classList.add("show");
+}
+</script>
 
 </body>
 
