@@ -2,22 +2,26 @@
 <html>
 
 <head>
-
-<title>Happiest Birthday Pagal Ladki ❤️</title>
-
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
+<title>Happiest Birthday Meri Pyaari Pagal Ladki ❤️</title>
 <link rel="stylesheet" href="style.css">
-
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
 
-<div class="landing-container">
+<!-- balloons -->
+<div class="balloon" style="left:5%; background:#ff8fab; animation-delay:0s;"></div>
+<div class="balloon" style="left:15%; background:#ffd166; animation-delay:2s;"></div>
+<div class="balloon" style="left:30%; background:#9bf6ff; animation-delay:4s;"></div>
+<div class="balloon" style="left:50%; background:#caffbf; animation-delay:1s;"></div>
+<div class="balloon" style="left:70%; background:#bdb2ff; animation-delay:3s;"></div>
+<div class="balloon" style="left:85%; background:#ffc6ff; animation-delay:5s;"></div>
 
-<h1>Happiest Birthday Pagal Ladki ❤️</h1>
+<div class="container">
 
-<p class="message">
+<h1>Happiest Birthday Meri Pyaari Pagal Ladki ❤️</h1>
+
+<p>
 Thank you for always being my support system.<br>
 Thank you for being my home.<br>
 I love you so so much.<br>
@@ -32,11 +36,9 @@ To infinity and beyond.
 
 <button onclick="startExperience()">🎉</button>
 
-<button onclick="window.location.href='notes.html'">💌</button>
+<button onclick="location.href='notes.html'">💟</button>
 
-<button onclick="window.location.href='memories.html'">📸</button>
-
-</div>
+<button onclick="location.href='memories.html'">📷</button>
 
 </div>
 
@@ -44,35 +46,9 @@ To infinity and beyond.
 <source src="assets/music/outofmyleague.mp3" type="audio/mpeg">
 </audio>
 
-<script>
+</div>
 
-function startExperience(){
-
-const music = document.getElementById("music");
-
-if(music){
-music.play().catch(()=>{});
-}
-
-confetti({
-particleCount:300,
-spread:120
-});
-
-}
-
-function blowCandles(){
-
-document.getElementById("wishText").classList.add("show");
-
-confetti({
-particleCount:500,
-spread:180
-});
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
