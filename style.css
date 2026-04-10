@@ -81,7 +81,7 @@ margin-bottom:30px;
 .heart-gallery{
 position:relative;
 width:520px;
-height:520px;
+height:560px;
 margin:40px auto;
 }
 
@@ -94,31 +94,31 @@ position:absolute;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* true heart shape */
+/* true heart */
 
 .p1{
-top:25px;
-left:205px;
+top:10px;
+left:210px;
 }
 
 .p2{
-top:95px;
-left:95px;
+top:110px;
+left:75px;
 }
 
 .p3{
-top:95px;
-right:95px;
+top:110px;
+right:75px;
 }
 
 .p4{
-top:225px;
-left:55px;
+top:250px;
+left:35px;
 }
 
 .center{
-top:185px;
-left:205px;
+top:190px;
+left:210px;
 cursor:pointer;
 border:4px solid white;
 transition:0.3s;
@@ -129,13 +129,13 @@ transform:scale(1.08);
 }
 
 .p5{
-top:225px;
-right:55px;
+top:250px;
+right:35px;
 }
 
 .p6{
-top:355px;
-left:205px;
+top:390px;
+left:210px;
 }
 
 .click-text{
@@ -218,8 +218,12 @@ object-fit:cover;
 object-position:center 45%;
 }
 
-.crop-low{
-object-position:center 60%;
+.crop-nine{
+object-position:center 75%;
+}
+
+.crop-one{
+object-position:center 35%;
 }
 
 .polaroid p{
