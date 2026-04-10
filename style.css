@@ -129,8 +129,9 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 /* row 1 */
 
 .p1{
-top:20px;
+top:5px;
 left:1500px;
+z-index:2;
 }
 
 .p2{
