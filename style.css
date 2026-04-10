@@ -72,28 +72,45 @@ background:#f7f7f7;
 
 .heart-gallery{
 position:relative;
-width:420px;
-height:420px;
+width:500px;
+height:460px;
 margin:40px auto;
 }
 
 .heart-photo{
-width:110px;
-height:110px;
+width:120px;
+height:120px;
 object-fit:cover;
-border-radius:14px;
+border-radius:16px;
 position:absolute;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
-.p1{top:20px; left:150px;}
-.p2{top:80px; left:70px;}
-.p3{top:80px; right:70px;}
-.p4{top:170px; left:20px;}
+/* realistic heart positions */
+
+.p1{
+top:30px;
+left:140px;
+}
+
+.p2{
+top:80px;
+left:50px;
+}
+
+.p3{
+top:80px;
+right:50px;
+}
+
+.p4{
+top:190px;
+left:20px;
+}
 
 .center{
 top:170px;
-left:155px;
+left:190px;
 cursor:pointer;
 border:4px solid white;
 transition:0.3s;
@@ -103,46 +120,83 @@ transition:0.3s;
 transform:scale(1.08);
 }
 
-.p5{top:170px; right:20px;}
-.p6{top:280px; left:150px;}
+.p5{
+top:190px;
+right:20px;
+}
+
+.p6{
+top:310px;
+left:190px;
+}
 
 .click-text{
 font-style:italic;
 margin-top:10px;
 }
 
-/* hidden wall */
+/* hidden photo wall */
 
 #photoWall{
 display:none;
 opacity:0;
 transition:1s;
-margin-top:50px;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-padding:30px;
+margin-top:70px;
 }
 
 #photoWall.show{
-display:grid;
+display:block;
 opacity:1;
 }
 
-.wall-item{
-text-align:center;
+/* hanging strings */
+
+.string-row{
+display:flex;
+justify-content:center;
+gap:25px;
+margin:50px 0;
+position:relative;
 }
 
-.wall-item img{
-width:100%;
-max-width:220px;
-border-radius:14px;
+.string-row::before{
+content:"";
+position:absolute;
+top:-20px;
+left:5%;
+width:90%;
+height:2px;
+background:white;
+}
+
+/* polaroids */
+
+.polaroid{
+background:white;
+padding:10px;
+padding-bottom:20px;
+border-radius:6px;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
+width:140px;
 }
 
-.wall-item p{
-font-size:16px;
+.polaroid:nth-child(odd){
+transform:rotate(-4deg);
+}
+
+.polaroid:nth-child(even){
+transform:rotate(4deg);
+}
+
+.polaroid img{
+width:100%;
+height:140px;
+object-fit:cover;
+}
+
+.polaroid p{
+font-size:14px;
 font-style:italic;
-max-width:220px;
-margin:auto;
+color:#333;
 margin-top:8px;
 }
