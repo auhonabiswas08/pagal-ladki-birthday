@@ -12,7 +12,7 @@
 <source src="assets/music/nothing.mp3" type="audio/mpeg">
 </audio>
 
-<h1>These are and will always be my most favourite memories 🧿❤️</h1>
+<h1>These are and will always be my most favourite memories🧿❤️</h1>
 
 <div class="heart-gallery">
 
@@ -40,7 +40,7 @@
 </div>
 
 <div class="polaroid">
-<img src="assets/music/9.jpeg.jpeg">
+<img src="assets/music/9.jpeg.jpeg" class="crop-down">
 </div>
 
 <div class="polaroid">
@@ -74,12 +74,12 @@
 </div>
 
 <div class="polaroid">
-<img src="assets/music/16.jpeg.jpeg">
+<img src="assets/music/16.jpeg.jpeg" class="crop-down">
 <p>No particular reason, still important.</p>
 </div>
 
 <div class="polaroid">
-<img src="assets/music/17.jpeg.jpeg">
+<img src="assets/music/17.jpeg.jpeg" class="crop-down">
 </div>
 
 <div class="polaroid">
@@ -102,9 +102,8 @@ document.getElementById("photoWall").classList.add("show");
 
 const music = document.getElementById("memoryMusic");
 
-if(music){
-music.play().catch(()=>{});
-}
+music.currentTime = 0;
+music.play();
 
 }
 </script>
