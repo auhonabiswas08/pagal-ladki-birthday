@@ -8,11 +8,11 @@
 
 <body>
 
-<audio id="memoryMusic" autoplay loop>
+<audio id="memoryMusic" loop>
 <source src="assets/music/nothing.mp3" type="audio/mpeg">
 </audio>
 
-<h1> These are and will always be my most favourite memories ❤️🧿 </h1>
+<h1>These are and will always be my most favourite memories 🧿❤️</h1>
 
 <div class="heart-gallery">
 
@@ -32,64 +32,80 @@
 
 <div id="photoWall">
 
-<div class="wall-item">
+<div class="string-row">
+
+<div class="polaroid">
 <img src="assets/photos/8.jpeg">
 <p>One of those moments that stayed.</p>
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/9.jpeg">
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/10.jpeg">
 <p>I still remember how light this felt.</p>
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/11.jpeg">
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/12.jpeg">
 </div>
 
-<div class="wall-item">
+</div>
+
+<div class="string-row">
+
+<div class="polaroid">
 <img src="assets/photos/13.jpeg">
 <p>This had to be here.</p>
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/14.jpeg">
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/15.jpeg">
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/16.jpeg">
 <p>No particular reason, still important.</p>
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/17.jpeg">
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/18.jpeg">
 </div>
 
-<div class="wall-item">
+<div class="polaroid">
 <img src="assets/photos/19.jpeg">
 <p>And this too.</p>
 </div>
 
 </div>
 
+</div>
+
 <script>
 function showWall(){
+
 document.getElementById("photoWall").classList.add("show");
+
+const music = document.getElementById("memoryMusic");
+
+if(music){
+music.play().catch(()=>{});
+}
+
 }
 </script>
 
