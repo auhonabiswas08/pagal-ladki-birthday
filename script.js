@@ -1,6 +1,8 @@
 function startExperience(){
 
-document.getElementById("music").play();
+const music = document.getElementById("music");
+
+music.play();
 
 confetti({
 particleCount:300,
