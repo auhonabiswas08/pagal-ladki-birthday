@@ -70,10 +70,18 @@ background:#f7f7f7;
 }
 /* memories page */
 
+.memory-title{
+font-size:28px;
+white-space:nowrap;
+margin-bottom:30px;
+}
+
+/* heart */
+
 .heart-gallery{
 position:relative;
-width:500px;
-height:470px;
+width:520px;
+height:520px;
 margin:40px auto;
 }
 
@@ -86,31 +94,31 @@ position:absolute;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* refined heart */
+/* final heart positions */
 
 .p1{
-top:15px;
-left:165px;
+top:5px;
+left:200px;
 }
 
 .p2{
-top:85px;
-left:55px;
+top:105px;
+left:65px;
 }
 
 .p3{
-top:85px;
-right:55px;
+top:105px;
+right:65px;
 }
 
 .p4{
-top:205px;
-left:20px;
+top:235px;
+left:40px;
 }
 
 .center{
-top:175px;
-left:190px;
+top:195px;
+left:200px;
 cursor:pointer;
 border:4px solid white;
 transition:0.3s;
@@ -121,13 +129,13 @@ transform:scale(1.08);
 }
 
 .p5{
-top:205px;
-right:20px;
+top:235px;
+right:40px;
 }
 
 .p6{
-top:325px;
-left:165px;
+top:365px;
+left:200px;
 }
 
 .click-text{
@@ -135,7 +143,7 @@ font-style:italic;
 margin-top:10px;
 }
 
-/* hidden photo wall */
+/* hidden wall */
 
 #photoWall{
 display:none;
@@ -149,13 +157,13 @@ display:block;
 opacity:1;
 }
 
-/* hanging strings */
+/* strings */
 
 .string-row{
 display:flex;
 justify-content:center;
 gap:25px;
-margin:50px 0;
+margin:55px 0;
 position:relative;
 }
 
@@ -182,12 +190,12 @@ position:relative;
 }
 
 .polaroid::before{
-content:"📌";
+content:"❤️";
 position:absolute;
 top:-18px;
 left:50%;
 transform:translateX(-50%);
-font-size:18px;
+font-size:16px;
 }
 
 .polaroid:nth-child(odd){
@@ -204,8 +212,14 @@ height:140px;
 object-fit:cover;
 }
 
+/* crop fixes */
+
 .crop-down{
-object-position:center 30%;
+object-position:center 45%;
+}
+
+.crop-low{
+object-position:center 60%;
 }
 
 .polaroid p{
