@@ -98,12 +98,12 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 
 .p1{
 top:20px;
-left:140px;
+left:150px;
 }
 
 .p2{
 top:20px;
-right:140px;
+right:10px;
 }
 
 /* row 2 */
@@ -149,9 +149,14 @@ top:450px;
 left:240px;
 }
 
-.click-text{
+..click-text{
 font-style:italic;
-margin-top:20px;
+font-size:20px;
+margin-top:30px;
+color:white;
+text-shadow:0 0 10px rgba(255,255,255,0.5);
+font-weight:500;
+letter-spacing:0.5px;
 }
 
 /* hidden wall */
