@@ -363,19 +363,32 @@ position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-background:white;
+background:#f5e6c8;
 color:#333;
-padding:30px;
-border-radius:16px;
-width:380px;
+padding:40px;
+width:430px;
 max-height:75vh;
 overflow:auto;
+border-radius:12px;
 box-shadow:0 10px 30px rgba(0,0,0,0.3);
-z-index:50;
-text-align:left;
-line-height:1.7;
-font-family:'Georgia', serif;
+z-index:21;
+font-family:"Palatino Linotype", serif;
 font-size:18px;
+line-height:1.9;
+text-align:left;
+border:1px solid rgba(0,0,0,0.08);
+}
+
+.scroll-letter p{
+margin-top:10px;
+}
+
+.scroll-letter span{
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+font-size:20px;
 }
 
 /* affirmations */
@@ -400,24 +413,45 @@ width:100%;
 border-radius:10px;
 display:block;
 }
-/* floating hearts */
+/* floating white hearts */
 
-.notes-container::before{
-content:"♡   ♡   ♡   ♡   ♡";
-display:block;
-font-size:22px;
+.notes-container::before,
+.notes-container::after{
+content:"♡ ♡ ♡ ♡ ♡";
+position:absolute;
+font-size:24px;
 color:white;
-opacity:0.7;
-margin-bottom:20px;
-animation:floatHearts 4s ease-in-out infinite;
+opacity:0.35;
+left:10%;
+animation:floatHearts1 6s ease-in-out infinite;
+pointer-events:none;
 }
 
-@keyframes floatHearts{
+.notes-container::after{
+top:75%;
+left:60%;
+font-size:20px;
+animation:floatHearts2 7s ease-in-out infinite;
+}
+
+@keyframes floatHearts1{
 0%{
 transform:translateY(0px);
 }
 50%{
-transform:translateY(-5px);
+transform:translateY(-12px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+@keyframes floatHearts2{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-10px);
 }
 100%{
 transform:translateY(0px);
