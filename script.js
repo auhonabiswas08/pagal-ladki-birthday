@@ -12,14 +12,16 @@ spread:120
 }
 
 function blowCandles(){
-
 document.getElementById("wishText").classList.add("show");
+
+document.querySelectorAll(".flame").forEach(flame=>{
+flame.style.display="none";
+});
 
 confetti({
 particleCount:500,
 spread:180
 });
-
 }
 function openLetter(id){
 document.getElementById(id).style.display="block";
