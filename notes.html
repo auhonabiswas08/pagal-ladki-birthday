@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>Notes 💌</title>
 <link rel="stylesheet" href="style.css">
@@ -8,10 +7,86 @@
 
 <body>
 
-<h1>Notes 💌</h1>
+<div class="notes-container">
 
-<p>Coming soon...</p>
+<div class="letters-grid">
+
+<div class="letter-icon" onclick="openLetter('proud')">💌</div>
+<div class="letter-icon" onclick="openLetter('missyou')">💌</div>
+<div class="letter-icon" onclick="openLetter('affirmations')">💌</div>
+<div class="letter-icon" onclick="openLetter('crossword')">💌</div>
+
+</div>
+
+<div class="scroll-section">
+<div class="scroll-icon" onclick="openLetter('finalletter')">📜</div>
+</div>
+
+<!-- Proud -->
+
+<div id="proud" class="popup-letter">
+<p>
+I wanted to start by saying that I am so so proud of you. Every time I hear you say things you want to do, and also the way you think about everyone it makes me wonder how can someone think like this and also with so much kindness. Although tu din mein 10 baar bolti hain ki kaash mein thoda aur smart hoti you’re the smartest person I know (ab toh bolegi sample size chota hain), but you’re like actually very very smart and smart in a very different way that I cannot even explain. You understand things at a much deeper level and you see things which most people don’t. You’re definitely the coolest person I’ve ever met and that has been a constant since the first day we met. Pagal ladki you have this charm and aura that people feel and you’re the kind of person more people should have in their life. I know main nakhre karti hun hain but again I am the best person to tell how much you make life better and obviously more people should have that, so even if mein nakhre karti hun no one should miss on that. You make the world a better place and I know you’ll make it an even better place.
+</p>
+<span onclick="closeLetter('proud')">✕</span>
+</div>
+
+<!-- Miss You -->
+
+<div id="missyou" class="popup-letter">
+<p>
+Pagalll Ladki,<br><br>
+
+I cannot even put in words how much I am gonna miss you. It’s not the place I am gonna miss, it’s you that I am gonna miss. I am trying so hard ki main nahi sochu, but everytime I think it physically pains thinking how much I am gonna miss you. Waking up and seeing you, eating together everyday, random walks, going out, doing everything together, me knowing you’re just one wall away, how I am supposed to give up all of that in a day. I hate it and I hate it more than anything that I would’ve wait for months to see you and hug you.<br><br>
+
+Aise toh I am gonna miss you always (bohut hiccups aane wale hain tujhe) but I’ll miss you even more, when:<br>
+~ I’ll eat<br>
+~ I’ll have watermelon juice<br>
+~ I’ll braid my hair<br>
+~ Bowling karne gayi toh<br>
+~ I’ll bake cinnamon rolls<br><br>
+
+Aise toh main likhte hi jayungi, but the main point is I am gonna miss you bohut zyada and I’ll call you and text toh bohut karungi and you’re not getting rid of me everrrrr.<br><br>
+
+Ilyysmmm 🫂❤️♾️
+</p>
+<span onclick="closeLetter('missyou')">✕</span>
+</div>
+
+<!-- Affirmations -->
+
+<div id="affirmations" class="popup-letter">
+
+<div class="affirmation-note" onclick="showAffirmation(1)">📝</div>
+<div class="affirmation-note" onclick="showAffirmation(2)">📝</div>
+<div class="affirmation-note" onclick="showAffirmation(3)">📝</div>
+<div class="affirmation-note" onclick="showAffirmation(4)">📝</div>
+
+<p id="affirmationText"></p>
+
+<span onclick="closeLetter('affirmations')">✕</span>
+
+</div>
+
+<!-- Crossword -->
+
+<div id="crossword" class="popup-letter crossword-box">
+<img src="assets/music/21.jpg" class="crossword-img">
+<span onclick="closeLetter('crossword')">✕</span>
+</div>
+
+<!-- Final Letter -->
+
+<div id="finalletter" class="scroll-letter">
+<p>
+PASTE YOUR FINAL LETTER HERE
+</p>
+<span onclick="closeLetter('finalletter')">✕</span>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
