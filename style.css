@@ -285,3 +285,105 @@ font-style:italic;
 color:#333;
 margin-top:8px;
 }
+/* NOTES PAGE FINAL FIX */
+
+.notes-container{
+text-align:center;
+padding:60px 20px;
+color:white;
+position:relative;
+z-index:2;
+}
+
+.letters-grid{
+display:grid;
+grid-template-columns:repeat(2,120px);
+gap:50px;
+justify-content:center;
+margin-bottom:40px;
+}
+
+.letter-icon{
+font-size:80px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.letter-icon:hover{
+transform:scale(1.1);
+}
+
+.scroll-section{
+margin-top:20px;
+}
+
+.scroll-icon{
+font-size:90px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.scroll-icon:hover{
+transform:scale(1.08);
+}
+
+/* hidden popups */
+
+.popup-letter,
+.scroll-letter{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+color:#333;
+padding:30px;
+border-radius:16px;
+width:380px;
+max-height:75vh;
+overflow:auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+z-index:50;
+text-align:left;
+line-height:1.6;
+}
+
+.scroll-letter{
+background:#f5e6c8;
+width:430px;
+}
+
+/* close button */
+
+.popup-letter span,
+.scroll-letter span{
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+font-size:20px;
+}
+
+/* affirmations */
+
+.affirmation-note{
+font-size:40px;
+cursor:pointer;
+display:inline-block;
+margin:10px;
+}
+
+#affirmationText{
+margin-top:20px;
+font-size:18px;
+text-align:center;
+}
+
+/* crossword */
+
+.crossword-img{
+width:100%;
+border-radius:10px;
+display:block;
+}
